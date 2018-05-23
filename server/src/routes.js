@@ -7,4 +7,7 @@ module.exports = (app) => {
   app.post('/register',
     AuthenticationControllerPolicy.register,
     AuthenticationController.register) // express middlewear
+
+  app.post('/login',
+    AuthenticationController.login)
 }

@@ -2,25 +2,21 @@
   <v-layout column>
     <v-flex>
       <div class="white elevation-2">
-        <v-toolbar float dense class="grey" dark>
+        <v-toolbar float dense class="light-blue darken-4" dark>
           <v-toolbar-title>Register</v-toolbar-title>
         </v-toolbar>
         <div class="pl-4 pr-4 pt-2 pb-2">
-          <input
-            type="email"
-            name="email"
-            v-model="email"
-            placeholder="Enter your Drexel Email" />
+          <v-text-field
+            label="Drexel Email"
+            v-model="email"></v-text-field>
           <br>
-          <input
-            type="password"
-            name="password"
-            v-model="password"
-            placeholder="Enter your Password" />
+          <v-text-field
+            label="Password"
+            v-model="password"></v-text-field>
           <br>
           <div class="error" v-html="error"></div>
           <br>
-          <v-btn @click="register">Register</v-btn>
+          <v-btn @click="register" class="light-blue darken-4" dark>Register</v-btn>
         </div>
       </div>
     </v-flex>

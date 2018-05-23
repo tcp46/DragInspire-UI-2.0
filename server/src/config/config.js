@@ -10,5 +10,8 @@ module.exports = {
       host: process.env.HOST || 'localhost',
       storage: './draginspire.sqlite'
     }
+  },
+  authentication: {
+    jwtSecret: process.env.JWT_SECRET || 'secret' // determining whether a JWT token is valid or not
   }
 }

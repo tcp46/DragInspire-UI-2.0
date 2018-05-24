@@ -1,14 +1,14 @@
 module.exports = {
   port: process.env.PORT || 8081,
   db: {
-    databse: process.env.DB_NAME || 'draginspire', // draginspire is the name of the database
-    user: process.env.DB_USER || 'draginspire',
-    password: process.env.DB_PASS || 'draginspire',
+    databse: process.env.DB_NAME || 'newdraginspire', // draginspire is the name of the database
+    user: process.env.DB_USER || 'newdraginspire',
+    password: process.env.DB_PASS || 'newdraginspire',
     options: {
       operatorsAliases: false,
       dialect: process.env.DIALECT || 'sqlite',
       host: process.env.HOST || 'localhost',
-      storage: './draginspire.sqlite'
+      storage: './newdraginspire.sqlite'
     }
   },
   authentication: {

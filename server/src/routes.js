@@ -1,5 +1,4 @@
 // routes are for declaring your routes that point to your controllers
-
 const AuthenticationController = require('./controllers/AuthenticationController')
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
 

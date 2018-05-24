@@ -12,9 +12,10 @@
           <br>
           <v-text-field
             label="Password"
+            type="password"
             v-model="password"></v-text-field>
           <br>
-          <div class="error" v-html="error"></div>
+          <div v-html="error"></div>
           <br>
           <v-btn @click="register" class="light-blue darken-4" dark>Login</v-btn>
         </div>
@@ -40,7 +41,8 @@ export default {
           email: this.email,
           password: this.password
         })
-        console.log(response.data)
+        this.$store.dispatch('setToken', response.data.token) // response comes from the constant defined above
+        this.$store.dispatch('setUser', response.data.user)
       } catch (error) {
         this.error = error.response.data.error
       }
@@ -50,7 +52,4 @@ export default {
 </script>
 
 <style>
-.error {
-  color: red;
-}
 </style>

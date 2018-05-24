@@ -15,7 +15,11 @@ module.exports = {
   async register (req, res) {
     try {
       const user = await User.create(req.body)
-      res.send(user.toJSON())
+      const userJson = user.toJSON()
+      res.send({
+        user: userJson,
+        token: jwtSignUser(userJson)
+      })
     } catch (err) {
       // email already exists
       res.status(400).send({
@@ -34,16 +38,17 @@ module.exports = {
 
       if (!user) {
         return res.status(403).send({
-          error: 'The login information was incorrect'
+          error: 'The login information was incorrect.'
         })
       }
 
       console.log('user', user.toJSON())
 
-      const isPasswordValid = password === user.password
+      const isPasswordValid = await user.comparePassword(password) // calls the function in the User.js file called User.prototype.comparePassword
+
       if (!isPasswordValid) {
         return res.status(403).send({
-          error: 'The login information was incorrect'
+          error: 'The login information was incorrect.'
         })
       }
       // comeback to this -- postman does not display a token following the user (tutorial #3 minute 35)

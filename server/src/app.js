@@ -12,7 +12,7 @@ app.use(cors())
 
 require('./routes')(app)
 
-sequelize.sync()
+sequelize.sync() // {force: true} plug this in, save, quit server, restart server, remove, save, and run postman
   .then(() => {
     app.listen(config.port)
     console.log('Server started on port')

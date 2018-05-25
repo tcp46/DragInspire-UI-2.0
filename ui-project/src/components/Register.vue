@@ -41,6 +41,9 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token) // response comes from the constant defined above
         this.$store.dispatch('setUser', response.data.user)
+        this.$router.push({
+          name: 'projects'
+        })
       } catch (error) {
         this.error = error.response.data.error
       }

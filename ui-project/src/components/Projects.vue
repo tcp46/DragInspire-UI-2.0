@@ -25,8 +25,7 @@
                 Project Description: {{project.description}}
               </div>
               <!--COMEBACK AND FIX THIS!-->
-              <v-btn dark class="light-blue darken-4"
-                @click="navigateTo({name: 'profile', params: {projectId: project.id}})">
+              <v-btn dark class="light-blue darken-4" :to="{name: 'project', params: {projectId: project.id}}">
                 View Project
               </v-btn>
             </v-flex>

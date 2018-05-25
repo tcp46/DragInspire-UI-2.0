@@ -6,7 +6,6 @@ import Login from '@/components/Login'
 import Projects from '@/components/Projects'
 import CreateProject from '@/components/CreateProject'
 import ViewProject from '@/components/ViewProject'
-import Profile from '@/components/Profile'
 
 Vue.use(Router)
 
@@ -41,11 +40,6 @@ export default new Router({
       path: '/projects/:projectId',
       name: 'project',
       component: ViewProject
-    },
-    {
-      path: '/projects/profile',
-      name: 'project-profile',
-      component: Profile
     }
   ]
 })

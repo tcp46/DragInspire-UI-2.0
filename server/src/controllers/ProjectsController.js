@@ -14,6 +14,17 @@ module.exports = {
       })
     }
   },
+  async show (req,res) {
+    try {
+      const project = await Project.findById(req.params.projectId)
+      res.send(project)
+      } catch (error) {
+        res.status(404).send({
+          error: 'Could not find the page you were looking for.'
+        })
+      }
+    }
+  },
   async post (req, res) {
     try {
       const project = await Project.create(req.body)

@@ -13,7 +13,7 @@
         <br>
         <div v-html="error"></div>
         <br>
-        <v-btn @click="register" class="light-blue darken-4" dark>Login</v-btn>
+        <v-btn @click="login" class="light-blue darken-4" dark>Login</v-btn>
       </panel>
     </v-flex>
   </v-layout>
@@ -31,7 +31,7 @@ export default {
     }
   },
   methods: {
-    async register () {
+    async login () {
       try {
         const response = await AuthenticationService.login({
           email: this.email,

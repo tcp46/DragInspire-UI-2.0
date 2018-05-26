@@ -1,7 +1,7 @@
 // routes are for declaring your routes that point to your controllers
 const AuthenticationController = require('./controllers/AuthenticationController')
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
-const ProjectsContoller = require('./controllers/ProjectsController')
+const ProjectsController = require('./controllers/ProjectsController')
 
 module.exports = (app) => {
   app.post('/register',
@@ -12,8 +12,14 @@ module.exports = (app) => {
     AuthenticationController.login)
 
   app.get('/projects',
-    ProjectsContoller.index)
+    ProjectsController.index)
 
   app.post('/projects',
-    ProjectsContoller.post)
+    ProjectsController.post)
+
+  app.get('/projects/:projectId',
+    ProjectsController.show)
+
+  app.put('/projects/:projectId',
+    ProjectsController.put)
 }

@@ -1,5 +1,5 @@
 <template>
-  <v-layout column>
+  <v-layout column fluid>
     <v-flex>
       <panel title="Register">
         <form name="draginspire-registration-form" autocomplete="off">
@@ -7,7 +7,7 @@
             label="Drexel Email"
             v-model="email"></v-text-field>
             <br>
-            <v-text-field
+          <v-text-field
             label="Password"
             type="password"
             v-model="password"></v-text-field>

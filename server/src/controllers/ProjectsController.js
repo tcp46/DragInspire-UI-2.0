@@ -18,11 +18,10 @@ module.exports = {
     try {
       const project = await Project.findById(req.params.projectId)
       res.send(project)
-      } catch (error) {
-        res.status(404).send({
-          error: 'Could not find the page you were looking for.'
-        })
-      }
+    } catch (err) {
+      res.status(500).send({
+        error: 'Could not find the project you were looking for.'
+      })
     }
   },
   async post (req, res) {
@@ -32,6 +31,20 @@ module.exports = {
     } catch (err) {
       res.status(500).send({
         error: 'An error has occured trying to create the project.'
+      })
+    }
+  },
+  async put (req, res) {
+    try {
+      await Project.update(req.body, {
+        where: {
+          id: req.params.projectId
+        }
+      })
+      res.send(req.body)
+    } catch (err) {
+      res.status(500).send({
+        error: 'an error has occured trying to update the project'
       })
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <v-layout column>
     <v-flex>
-      <panel title="Projects">
+      <panel title="Student Projects">
         <!--the online tutorial changes this into a navigateTo method
         I chose to keep it here because i like the styling-->
         <router-link slot="action" :to="{name: 'projects-create'}">
@@ -21,10 +21,6 @@
               <div class="project-skills">
                 Skills Needed: {{project.skills}}
               </div>
-              <div class="project-description">
-                Project Description: {{project.description}}
-              </div>
-              <!--COMEBACK AND FIX THIS!-->
               <v-btn dark class="light-blue darken-4" :to="{name: 'project', params: {projectId: project.id}}">
                 View Project
               </v-btn>

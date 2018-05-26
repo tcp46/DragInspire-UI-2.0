@@ -26,13 +26,6 @@
         v-model="project.description"
         multi-line
       ></v-text-field>
-      <v-text-field
-        label="Tab"
-        required
-        :rules="[required]"
-        v-model="project.tab"
-        multi-line
-      ></v-text-field>
     </panel>
     <span class="danger-alert" v-if="error">
       {{error}}
@@ -55,7 +48,6 @@ export default {
         creator: null,
         skills: null,
         description: null,
-        tab: null
       },
       error: null,
       required: (value) => !!value || 'Required.'

@@ -43,8 +43,8 @@ export default new Router({
       component: ViewProject
     },
     {
-      path: '/profile',
-      name: 'profile',
+      path: '/projects/:userEmail',
+      name: 'UserProfile',
       component: Profile
     }
   ]

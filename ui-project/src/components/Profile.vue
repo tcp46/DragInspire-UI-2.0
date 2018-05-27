@@ -1,71 +1,43 @@
 <template>
-  <div>
-    <panel title="User Profile">
-      <v-text-field
-        label="First Name"
-        v-model="profile.first_name"
-      ></v-text-field>
-      <v-text-field
-        label="Last Name"
-        v-model="profile.last_name"
-      ></v-text-field>
-      <v-text-field
-        label="Graduation Year"
-        v-model="profile.graduation_year"
-      ></v-text-field>
-      <v-text-field
-        label="College"
-        v-model="profile.college"
-      ></v-text-field>
-      <v-text-field
-        label="Major"
-        v-model="profile.major"
-      ></v-text-field>
-      <v-text-field
-        label="Skills"
-        v-model="profile.skills"
-      ></v-text-field>
-    </panel>
-    <br>
-    <v-btn dark class="light-blue darken-4" @click="saveProfile">
-      Create Project
-    </v-btn>
-  </div>
+  <v-layout>
+    <v-flex xs8 class="info">
+      <panel title="Creator Profile">
+        <div class="user-first-name">
+          First Name: {{user.firstName}}
+        </div>
+        <div class="user-last-name">
+          Last Name: {{user.lastName}}
+        </div>
+        <div class="user-email">
+          Email: {{user.email}}
+        </div>
+      </panel>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
-import ProfilesService from '@/services/ProfilesService'
+import AuthenticationService from '@/services/AuthenticationService'
 import Panel from '@/components/Panel'
 export default {
-  components: {
-    Panel
-  },
   data () {
     return {
-      profile: {
-        first_name: null,
-        last_name: null, // email of drexel student that made this project
-        graduation_year: null,
-        college: null,
-        major: null,
-        skills: null
-      }
+      user: {}
     }
   },
-  methods: {
-    async saveProfile () {
-      try {
-        await ProfilesService.post(this.profile)
-        this.$router.push({
-          name: 'projects'
-        })
-      } catch (err) {
-        console.log(err)
-      }
-    }
+  async mounted () {
+    const userEmail = this.$store.state.route.params.userEmail
+    this.user = (await AuthenticationService.show(userEmail)).data
+  },
+  components: {
+    Panel
   }
 }
 </script>
 
 <style>
+.text {
+  text-align: left;
+  padding: 10px;
+}
 </style>

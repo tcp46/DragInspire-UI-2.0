@@ -37,6 +37,7 @@ export default {
           email: this.email,
           password: this.password
         })
+        console.log(response)
         this.$store.dispatch('setToken', response.data.token) // response comes from the constant defined above
         this.$store.dispatch('setUser', response.data.user)
         this.$router.push({

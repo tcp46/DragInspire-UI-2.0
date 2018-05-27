@@ -10,7 +10,7 @@
         Projects
       </v-btn>
       <v-btn v-if="$store.state.isUserLoggedIn" flat dark @click="navigateTo({name: 'profile'})">
-        Your Profile
+        Update Your Profile
       </v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>

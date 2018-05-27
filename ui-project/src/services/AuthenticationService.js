@@ -6,5 +6,8 @@ export default {
   },
   login (credentials) {
     return Api().post('login', credentials)
+  },
+  show (userEmail) {
+    return Api().get(`projects/${userEmail}`)
   }
 }

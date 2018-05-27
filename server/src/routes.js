@@ -4,6 +4,7 @@ const AuthenticationControllerPolicy = require('./policies/AuthenticationControl
 const ProjectsController = require('./controllers/ProjectsController')
 
 module.exports = (app) => {
+  //AuthenticationController database requests
   app.post('/register',
     AuthenticationControllerPolicy.register,
     AuthenticationController.register) // express middlewear
@@ -11,6 +12,10 @@ module.exports = (app) => {
   app.post('/login',
     AuthenticationController.login)
 
+  app.get('/projects/:userEmail',
+    AuthenticationController.show)
+
+  //ProjectsController database requests
   app.get('/projects',
     ProjectsController.index)
 

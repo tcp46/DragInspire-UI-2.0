@@ -1,7 +1,7 @@
 <template>
   <v-layout>
     <v-flex xs8 class="info">
-      <panel title="More on Clicked Project">
+      <panel title="Project Metadata">
         <div class="project-name" bold>
           Project Name: {{project.name}}
         </div>
@@ -9,10 +9,6 @@
         <div class="project-creator">
           Student Email: <br>
           {{project.creator}} <br>
-          <!--Change to the particular student profile based on their email-->
-          <v-btn dark class="light-blue darken-4" :to="{name: 'project', params: {projectId: project.id}}">
-            Student Profile
-          </v-btn>
         </div>
         <br>
         <div class="project-skills">

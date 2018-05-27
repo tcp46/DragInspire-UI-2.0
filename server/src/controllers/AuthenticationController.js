@@ -62,5 +62,19 @@ module.exports = {
         error: 'An error has occured while trying to login.'
       })
     }
+  },
+  async show (req,res) {
+    try {
+      const user = await User.findOne({
+        where: {
+          email: req.params.userEmail
+        }
+      })
+      res.send(user)
+    } catch (err) {
+      res.status(500).send({
+        error: 'Could not find the profile you were looking for.'
+      })
+    }
   }
 }

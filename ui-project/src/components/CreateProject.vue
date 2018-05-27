@@ -47,7 +47,7 @@ export default {
         name: null,
         creator: null,
         skills: null,
-        description: null,
+        description: null
       },
       error: null,
       required: (value) => !!value || 'Required.'

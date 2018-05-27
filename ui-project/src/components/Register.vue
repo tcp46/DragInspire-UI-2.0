@@ -4,11 +4,33 @@
       <panel title="Register">
         <form name="draginspire-registration-form" autocomplete="off">
           <v-text-field
-            label="Drexel Email"
-            v-model="email"></v-text-field>
-            <br>
+            placeholder="First Name"
+            type="string"
+            name="firstName"
+            v-model="firstName"></v-text-field>
           <v-text-field
-            label="Password"
+            placeholder="Last Name"
+            type="string"
+            name="lastName"
+            v-model="lastName"></v-text-field>
+          <v-select
+            type="string"
+            :items="years"
+            placeholder="Graduation Year"
+            v-model="gradYear"></v-select>
+          <v-select
+            type="string"
+            :items="colleges"
+            placeholder="What college are you in?"
+            v-model="college"></v-select>
+          <v-text-field
+            placeholder="Drexel Email"
+            type="email"
+            name="email"
+            v-model="email"></v-text-field>
+          <v-text-field
+            placeholder="Password"
+            name="password"
             type="password"
             v-model="password"></v-text-field>
         </form>
@@ -27,6 +49,33 @@ import Panel from '@/components/Panel'
 export default {
   data () {
     return {
+      firstName: '',
+      lastName: '',
+      gradYear: '',
+      years: [
+        { text: '2019' },
+        { text: '2020' },
+        { text: '2021' },
+        { text: '2022' },
+        { text: '2023' },
+        { text: '2024' }
+      ],
+      college: '',
+      colleges: [
+        { text: 'Antoinette Westphal College of Media Arts & Design' },
+        { text: 'Bennett S. LeBow College of Business' },
+        { text: 'Center for Food and Hospitality Management' },
+        { text: 'Center for Sport Management' },
+        { text: 'Close School of Entrepreneurship' },
+        { text: 'College of Arts and Sciences' },
+        { text: 'College of Computing & Informatics' },
+        { text: 'College of Engineering' },
+        { text: 'College of Nursing and Health Professions' },
+        { text: 'Dornsife School of Public Health' },
+        { text: 'Goodwin College of Professional Studies' },
+        { text: 'School of Biomedical Engineering, Science and Health Systems' },
+        { text: 'School of Education' }
+      ],
       email: '',
       password: '',
       error: null
@@ -36,6 +85,10 @@ export default {
     async register () {
       try {
         const response = await AuthenticationService.register({
+          firstName: this.firstName,
+          lastName: this.lastName,
+          gradYear: this.gradYear,
+          college: this.college,
           email: this.email,
           password: this.password
         })

@@ -7,6 +7,8 @@ module.exports = {
       lastName: Joi.string().optional(),
       gradYear: Joi.string().optional(),
       college: Joi.string().optional(),
+      major: Joi.string().optional(),
+      skills: Joi.string().optional(),
       email: Joi.string().email(),
       password: Joi.string().regex(
         new RegExp('^[a-zA-Z0-9]{8,32}$') // everthing passed in must fulfill these parameters
@@ -32,7 +34,15 @@ module.exports = {
           })
         case 'college':
           res.status(400).send({
-            error: 'Oops, your college year was entered incorrectly.'
+            error: 'Oops, your college was entered incorrectly.'
+          })
+        case 'major':
+          res.status(400).send({
+            error: 'Oops, your major was entered incorrectly.'
+          })
+        case 'skills':
+          res.status(400).send({
+            error: 'Oops, your skills were entered incorrectly.'
           })
         case 'email':
           res.status(400).send({

@@ -21,6 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     lastName: DataTypes.STRING,
     gradYear: DataTypes.STRING,
     college: DataTypes.STRING,
+    major: DataTypes.STRING,
+    skills: DataTypes.STRING,
     email: {
       type: DataTypes.STRING,
       unique: true
@@ -35,6 +37,6 @@ module.exports = (sequelize, DataTypes) => {
   User.prototype.comparePassword = function (password) {
     return bcrypt.compareAsync(password, this.password)
   }
-  
+
   return User
 }

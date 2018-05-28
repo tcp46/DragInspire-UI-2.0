@@ -9,13 +9,19 @@
           Last Name: {{user.lastName}}
         </div>
         <div class="text-sm-left">
+          Email: {{user.email}}
+        </div>
+        <div class="text-sm-left">
           Graduation Year: {{user.gradYear}}
         </div>
         <div class="text-sm-left">
           College: {{user.college}}
         </div>
         <div class="text-sm-left">
-          Email: {{user.email}}
+          Major: {{user.major}}
+        </div>
+        <div class="text-sm-left">
+          Skills: {{user.skills}}
         </div>
       </panel>
     </v-flex>

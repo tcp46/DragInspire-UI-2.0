@@ -1,4 +1,4 @@
-<template>
+major<template>
   <v-layout column fluid>
     <v-flex>
       <panel title="Register">
@@ -23,6 +23,16 @@
             :items="colleges"
             placeholder="What college are you in?"
             v-model="college"></v-select>
+          <v-text-field
+            placeholder="What is your major?"
+            type="string"
+            name="major"
+            v-model="major"></v-text-field>
+          <v-text-field
+            placeholder="Skills"
+            type="string"
+            name="skills"
+            v-model="skills"></v-text-field>
           <v-text-field
             placeholder="Drexel Email"
             type="email"
@@ -76,6 +86,8 @@ export default {
         { text: 'School of Biomedical Engineering, Science and Health Systems' },
         { text: 'School of Education' }
       ],
+      major: '',
+      skills: '',
       email: '',
       password: '',
       error: null
@@ -89,6 +101,8 @@ export default {
           lastName: this.lastName,
           gradYear: this.gradYear,
           college: this.college,
+          major: this.major,
+          skills: this.skills,
           email: this.email,
           password: this.password
         })

@@ -16,7 +16,11 @@ module.exports = {
   },
   async show (req,res) {
     try {
-      const project = await Project.findById(req.params.projectId)
+      const project = await Project.findOne({
+        where: {
+          id: req.params.projectId
+        }
+      })
       res.send(project)
     } catch (err) {
       res.status(500).send({

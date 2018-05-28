@@ -1,14 +1,20 @@
 <template>
   <v-layout>
-    <v-flex xs8 class="info">
+    <v-flex class="info">
       <panel title="Creator Profile">
-        <div class="user-first-name">
+        <div class="text-sm-left">
           First Name: {{user.firstName}}
         </div>
-        <div class="user-last-name">
+        <div class="text-sm-left">
           Last Name: {{user.lastName}}
         </div>
-        <div class="user-email">
+        <div class="text-sm-left">
+          Graduation Year: {{user.gradYear}}
+        </div>
+        <div class="text-sm-left">
+          College: {{user.college}}
+        </div>
+        <div class="text-sm-left">
           Email: {{user.email}}
         </div>
       </panel>
@@ -26,7 +32,7 @@ export default {
     }
   },
   async mounted () {
-    const userEmail = this.$store.state.route.params.userEmail
+    const userEmail = this.$store.state.user.email
     this.user = (await AuthenticationService.show(userEmail)).data
   },
   components: {
@@ -36,7 +42,7 @@ export default {
 </script>
 
 <style>
-.text {
+text {
   text-align: left;
   padding: 10px;
 }

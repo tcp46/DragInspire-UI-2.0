@@ -21,12 +21,11 @@
               <div class="project-skills">
                 Skills Needed: {{project.skills}}
               </div>
-              <!--Change to the particular student profile based on their email-->
+              <div class="project-description">
+                Description: {{project.description}}
+              </div>
               <v-btn dark class="light-blue darken-4" :to="{name: 'UserProfile', params: {userEmail: project.creator}}">
-                Student Profile
-              </v-btn>
-              <v-btn dark class="light-blue darken-4" :to="{name: 'project', params: {projectId: project.id}}">
-                View Project
+                Creator Profile
               </v-btn>
             </v-flex>
           </v-layout>

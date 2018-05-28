@@ -5,8 +5,8 @@ import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Projects from '@/components/Projects'
 import CreateProject from '@/components/CreateProject'
-import ViewProject from '@/components/ViewProject'
-import Profile from '@/components/Profile'
+import CreatorProfile from '@/components/CreatorProfile'
+import UserProfile from '@/components/UserProfile'
 
 Vue.use(Router)
 
@@ -38,14 +38,14 @@ export default new Router({
       component: CreateProject
     },
     {
-      path: '/projects/:projectId',
-      name: 'project',
-      component: ViewProject
-    },
-    {
       path: '/projects/:userEmail',
       name: 'UserProfile',
-      component: Profile
+      component: CreatorProfile
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: UserProfile
     }
   ]
 })

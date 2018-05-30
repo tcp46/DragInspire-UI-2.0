@@ -43,7 +43,7 @@ Update a project based on the project id -- assuming the user has access to the 
 **Condition**: User not logged In
 **Code**: `403 Forbidden`
 **Content**
-```json
+```
 {
 	error: "Your session has expired.  You must log in to see this information"
 }
@@ -52,11 +52,11 @@ Update a project based on the project id -- assuming the user has access to the 
 **Condition**: Invalid Inputs
 **Code**: `400 Bad Request`
 **Content**
-```json
+```
 {
 	error: "You failed to complete the form requirements."
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDYzNTQyNSwtOTUxNjU3Nzk5XX0=
+eyJoaXN0b3J5IjpbLTQyODczMDcxOSwtOTUxNjU3Nzk5XX0=
 -->

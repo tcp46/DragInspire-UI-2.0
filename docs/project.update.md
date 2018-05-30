@@ -5,7 +5,7 @@ Update a project based on the project id -- assuming the user has access to the 
 **METHOD**: `PUT`
 **AUTH REQUIRED**: YES
 **Data Constraints**
-```
+```javascript
 {
 	name: <project-name>,
 	description: <project-description>,
@@ -15,7 +15,7 @@ Update a project based on the project id -- assuming the user has access to the 
 ## Success Response
 **Code**: `200 OK`
 **Content Example**
-```
+```javascript
 {
     project: {
 	    id: 2,
@@ -34,7 +34,7 @@ Update a project based on the project id -- assuming the user has access to the 
 **Condition**: Invalid Project ID
 **Code**: `400 Bad Request`
 **Content**
-```
+```javascript
 {
 	error: "The project ID you entered is invalid"
 }
@@ -43,7 +43,7 @@ Update a project based on the project id -- assuming the user has access to the 
 **Condition**: User not logged In
 **Code**: `403 Forbidden`
 **Content**
-```
+```javascript
 {
 	error: "Your session has expired.  You must log in to see this information"
 }
@@ -52,11 +52,11 @@ Update a project based on the project id -- assuming the user has access to the 
 **Condition**: Invalid Inputs
 **Code**: `400 Bad Request`
 **Content**
-```
+```javascript
 {
 	error: "You failed to complete the form requirements."
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyODczMDcxOSwtOTUxNjU3Nzk5XX0=
+eyJoaXN0b3J5IjpbMjczMTkzMjM2LC05NTE2NTc3OTldfQ==
 -->

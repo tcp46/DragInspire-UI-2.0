@@ -34,7 +34,7 @@ Update a project based on the project id -- assuming the user has access to the 
 **Condition**: Invalid Project ID
 **Code**: `400 Bad Request`
 **Content**
-```json
+```
 {
 	error: "The project ID you entered is invalid"
 }
@@ -58,5 +58,5 @@ Update a project based on the project id -- assuming the user has access to the 
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NTc2MzEyOSwtOTUxNjU3Nzk5XX0=
+eyJoaXN0b3J5IjpbMTQ3NDYzNTQyNSwtOTUxNjU3Nzk5XX0=
 -->

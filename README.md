@@ -6,7 +6,9 @@
 DragInspire is a web platform designed to streamline the entrepreneurial spirit of Drexel into one place.  We all have ideas for new businesses, side projects, etc.  But one of the hardest ways to get there is to find the *right people to work with*.   
 
 ## Long Term Project Scope
-[] 
+
+- [x] Create basic Server / UI connection using NodeJS
+- [x] Set up SQL database for persiste
 ## Getting Started
 
 ### Installation
@@ -76,5 +78,5 @@ You should add a `.gitignore` file to your project directory, and add the `node_
 
 @TODO: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTA0NzAxMzAsNjg3ODQwMDM3XX0=
+eyJoaXN0b3J5IjpbLTE5OTUzNjA1NDMsNjg3ODQwMDM3XX0=
 -->

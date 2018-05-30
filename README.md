@@ -9,7 +9,8 @@ DragInspire is a web platform designed to streamline the entrepreneurial spirit 
 
 - [x] Create basic Server / UI connection using NodeJS
 - [x] Set up SQL database for persistent storage
-- [x] Cre
+- [x] Create Authentication Service for both Registration and Login
+- [x] 
 ## Getting Started
 
 ### Installation
@@ -79,5 +80,5 @@ You should add a `.gitignore` file to your project directory, and add the `node_
 
 @TODO: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg1MjU3MDA3LDY4Nzg0MDAzN119
+eyJoaXN0b3J5IjpbLTMwNTgwMDUzMCw2ODc4NDAwMzddfQ==
 -->

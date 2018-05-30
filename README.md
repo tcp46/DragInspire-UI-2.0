@@ -12,8 +12,9 @@ DragInspire is a web platform designed to streamline the entrepreneurial spirit 
 - [x] Create Authentication Service for both Registration and Login
 - [x] Implement Project Creation
 - [x] Create Skills in the Backend
-- [x] Set up Documentation
-- [x] Set up server with provisioning
+- [x] Create a UML for the Database Schema (ERD)  
+- [x] Create the Git Branch workflow
+- [x] Set up the production server
 - [ ] Create Skill Functionality in the Vue App
 - [ ] Create the matching engine <sup>1</sup>  
 - [ ] Create Skills  
@@ -88,5 +89,6 @@ You should add a `.gitignore` file to your project directory, and add the `node_
 
 @TODO: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTU3MzUxNSw2ODc4NDAwMzddfQ==
+eyJoaXN0b3J5IjpbMTUyNjE1MTAzNywxNTgxNTczNTE1LDY4Nz
+g0MDAzN119
 -->

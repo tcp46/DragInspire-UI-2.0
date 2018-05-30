@@ -60,7 +60,7 @@ The server component of the application and the UI, while both written in JavaSc
 
 You should add a `.gitignore` file to your project directory, and add the `node_modules/` directory and `newdraginspire.sqlite`.  
 
-### API
+### API (Ba
 #### Authentication
 * [Registration](docs/register.md): `POST /register`
 * [Login](docs/login.md): `POST /login`
@@ -70,7 +70,9 @@ You should add a `.gitignore` file to your project directory, and add the `node_
 
 #### Projects
 * [Project Create](docs/project.create.md): `POST /project`
-* [Project Update](docs/project.update.md): `PUT /`
+* [Project Update](docs/project.update.md): `PUT /project/:id`
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjcyNTUxODAsNjg3ODQwMDM3XX0=
+eyJoaXN0b3J5IjpbOTY5MTI4OTgsNjg3ODQwMDM3XX0=
 -->

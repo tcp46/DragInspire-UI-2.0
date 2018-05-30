@@ -5,7 +5,7 @@ Update a project based on the project id -- assuming the user has access to the 
 **METHOD**: `PUT`
 **AUTH REQUIRED**: YES
 **Data Constraints**
-```json
+```
 {
 	name: <project-name>,
 	description: <project-description>,
@@ -15,7 +15,7 @@ Update a project based on the project id -- assuming the user has access to the 
 ## Success Response
 **Code**: `200 OK`
 **Content Example**
-```json
+```
 {
     project: {
 	    id: 2,
@@ -58,5 +58,5 @@ Update a project based on the project id -- assuming the user has access to the 
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MTY1Nzc5OV19
+eyJoaXN0b3J5IjpbMTQ3NTc2MzEyOSwtOTUxNjU3Nzk5XX0=
 -->

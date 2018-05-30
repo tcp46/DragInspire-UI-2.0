@@ -9,7 +9,7 @@ Returns all the information based on the user's submitted profile and any model 
 ## Success Response
 **CODE**: `200 OK`
 **Content Example**
-```json
+```javascript
 {
    project: {
 	   id: 4,
@@ -29,7 +29,7 @@ Returns all the information based on the user's submitted profile and any model 
 **Condition**: Project ID does not exist
 **Code**: `400 Bad Request`
 **Content**
-```json
+```javascript
 {
    error: "Invalid Project ID"
 }
@@ -38,7 +38,7 @@ Returns all the information based on the user's submitted profile and any model 
 **Condition**: User does not belong to Project (either as owner or member)
 **Code**: `403 Forbidden`
 **Content**
-```json
+```javascript
 {
 	error: "You do not have access to view this project"
 }
@@ -46,5 +46,5 @@ Returns all the information based on the user's submitted profile and any model 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NTc2OTc0M119
+eyJoaXN0b3J5IjpbLTQzMjc4OTE3NF19
 -->

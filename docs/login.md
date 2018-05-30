@@ -5,7 +5,7 @@
 **METHOD**: `POST`
 **AUTH Required**: NO
 **Data Constraints**
-```json
+```javascript
 {
     "email": "<registered user-email>",
     "password": "<un-hashed user-password">",
@@ -15,7 +15,7 @@
 ## Success Response
 **CODE**: `200 OK`
 **Content Example**
-```json
+```javascript
 {
     user: {
 	    "firstName": "Elliot",
@@ -31,7 +31,7 @@
 **Condition**: Invalid email/password configuration
 **CODE**: `403 Forbidden`
 **Content**
-```json
+```javascript
 {
     error: "Invalid email/password combination"
 }
@@ -40,7 +40,7 @@
 **Condition**: Invalid JWT Token
 **Code**: `403 Forbidden`
 **Content**
-```json
+```javascript
 {
 	error: "Invalid token"
 }
@@ -49,7 +49,7 @@
 **Condition**: Email not found in database.
 **Code**: `403 Forbidden`
 **Content**
-```json
+```javascript
 {
    error: "Email not found in our records to match any user"
 }
@@ -58,7 +58,7 @@
 **Condition**: Incomplete form
 **Code**: `400 Bad Request`
 **Content**
-```json
+```javascript
 {
    error: "You must complete all form elements." 
 }
@@ -66,5 +66,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMjE3MTkyNV19
+eyJoaXN0b3J5IjpbNDgzNjc3NzQ5XX0=
 -->

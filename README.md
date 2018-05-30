@@ -11,8 +11,10 @@ DragInspire is a web platform designed to streamline the entrepreneurial spirit 
 - [x] Set up SQL database for persistent storage
 - [x] Create Authentication Service for both Registration and Login
 - [x] Implement Project Creation
-- [ ] Create the matching engine <  
+- [ ] Create the matching engine <sup>1</sup>  
 - [ ] test  
+
+<sup>1</sup>The Matching Engine --> matches any objects <i>containing</i> skills traits to any objects <   
 ## Getting Started
 
 ### Installation
@@ -82,5 +84,5 @@ You should add a `.gitignore` file to your project directory, and add the `node_
 
 @TODO: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjgzOTQ3Myw2ODc4NDAwMzddfQ==
+eyJoaXN0b3J5IjpbLTU5MTc1MjQ0Myw2ODc4NDAwMzddfQ==
 -->

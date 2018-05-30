@@ -51,12 +51,12 @@ Used to add a user instance from the UI form to the database.
 **Condition**: Invalid form request
 **Code**: `400 Bad Request`
 **Content**
-```jav
+```javascript
 {
     error: "Your form was incomplete.  Please make sure you filled out all required sections"
 }
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg1NTA1NDE0XX0=
+eyJoaXN0b3J5IjpbLTE1NzEzMTQxMF19
 -->

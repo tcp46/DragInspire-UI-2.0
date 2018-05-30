@@ -63,7 +63,7 @@ You should add a `.gitignore` file to your project directory, and add the `node_
 ### API
 #### Authentication
 * [Registration](docs/register.md): `POST /register`
-* [Login](docs/login.md): `POST /login
+* [Login](docs/login.md): `POST /login`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTE5MTA0ODFdfQ==
+eyJoaXN0b3J5IjpbNjg3ODQwMDM3XX0=
 -->

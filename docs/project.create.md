@@ -16,7 +16,7 @@ For a logged-in user to create a project based on skills they are seeking.  Proj
 ## Success Response
 **Code**: `200 OK`
 **Content Example**
-```json
+```javascript
 {
     project: {
 	    id: 2,
@@ -35,7 +35,7 @@ For a logged-in user to create a project based on skills they are seeking.  Proj
 **Condition**: User not logged in
 **Code**: `403 Forbidden`
 **Content**
-```json
+```javascript
 {
 	error: "Session unauthorized.  Please log in"
 }
@@ -44,11 +44,11 @@ For a logged-in user to create a project based on skills they are seeking.  Proj
 **Condition**: Invalid inputs
 **Code**: `400 Bad Request`
 **Content**
-```json
+```javascript
 {
 	error: "Make sure to fill out every input required"
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODM0MDgxNThdfQ==
+eyJoaXN0b3J5IjpbNjE4Nzc5OTMzXX0=
 -->

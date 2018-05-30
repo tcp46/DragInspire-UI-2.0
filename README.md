@@ -66,7 +66,7 @@ You should add a `.gitignore` file to your project directory, and add the `node_
 * [Login](docs/login.md): `POST /login`
 
 #### User Profile
-* [Profile View]
+* [Profile View](docs/profile.md): `GET /project/:id` 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NTk3MzY0OSw2ODc4NDAwMzddfQ==
+eyJoaXN0b3J5IjpbMTA3MDc5NjQ2LDY4Nzg0MDAzN119
 -->

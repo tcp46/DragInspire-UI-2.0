@@ -67,6 +67,10 @@ You should add a `.gitignore` file to your project directory, and add the `node_
 
 #### User Profile
 * [Profile View](docs/profile.md): `GET /project/:id` 
+
+#### Projects
+* [Project Create](docs/project.create.md): `POST /project`
+* [Project Update](docs/project.update.md): `PUT /`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MDc5NjQ2LDY4Nzg0MDAzN119
+eyJoaXN0b3J5IjpbLTEwNjcyNTUxODAsNjg3ODQwMDM3XX0=
 -->

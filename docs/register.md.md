@@ -42,7 +42,7 @@ Used to add a user instance from the UI form to the database.
 **Condition**: If email account is already in use.
 **Code**: `400 Bad Request`
 **Content**
-```
+```javascript
 {
 	error: "Email already in use."
 }
@@ -51,12 +51,12 @@ Used to add a user instance from the UI form to the database.
 **Condition**: Invalid form request
 **Code**: `400 Bad Request`
 **Content**
-```
+```jav
 {
     error: "Your form was incomplete.  Please make sure you filled out all required sections"
 }
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NTM1MDM4Nl19
+eyJoaXN0b3J5IjpbMzg1NTA1NDE0XX0=
 -->
